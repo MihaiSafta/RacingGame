@@ -2,14 +2,70 @@ package org.FasttrackIT;
 
 
 public class Vehicle {
-    String name;
-    double mileage;
-    String color;
-    double maxspeed;
-    boolean running;
-    double fuelLevel;
-    double traveledDistance;
+   private String name;
+   private double mileage;
+   private String color;
+   private double maxspeed;
+   private boolean running;
+   private double fuelLevel;
+   private double traveledDistance;
 
+
+    public String getName() {
+        return name;
+    }
+
+    public double getMileage() {
+        return mileage;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public double getMaxspeed() {
+        return maxspeed;
+    }
+
+    public boolean isRunning() {
+        return running;
+    }
+
+    public double getFuelLevel() {
+        return fuelLevel;
+    }
+
+    public double getTraveledDistance() {
+        return traveledDistance;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setMileage(double mileage) {
+        this.mileage = mileage;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setMaxspeed(double maxspeed) {
+        this.maxspeed = maxspeed;
+    }
+
+    public void setRunning(boolean running) {
+        this.running = running;
+    }
+
+    public void setFuelLevel(double fuelLevel) {
+        this.fuelLevel = fuelLevel;
+    }
+
+    public void setTraveledDistance(double traveledDistance) {
+        this.traveledDistance = traveledDistance;
+    }
 
     public double accelerate(double speed, double duration){
         //concatenation
@@ -35,6 +91,7 @@ public class Vehicle {
         System.out.println("Remaining fuel: " + fuelLevel + " l. ");
 
         return distance;
+
 
 
     }
