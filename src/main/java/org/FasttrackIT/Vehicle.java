@@ -1,6 +1,5 @@
 package org.FasttrackIT;
 
-import java.time.LocalDate;
 
 public class Vehicle {
     String name;
@@ -10,7 +9,7 @@ public class Vehicle {
     boolean running;
     double fuelLevel;
     double traveledDistance;
-    LocalDate createdDate;
+
 
     public double accelerate(double speed, double duration){
         //concatenation
