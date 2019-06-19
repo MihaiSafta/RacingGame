@@ -60,6 +60,11 @@ public class App
 //        System.out.println("Total count from car after setting car2: " + car.totalCount);
 //        System.out.println("Total count from car: " +car2.totalCount);
 //        System.out.println("Total count from Vehicle class: " + Vehicle.totalCount);
+    car2.accelerate(100);
+
+    new AutoVehicle();
+
 
     }
+
 }

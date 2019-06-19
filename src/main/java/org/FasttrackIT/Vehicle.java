@@ -80,12 +80,12 @@ public class Vehicle{
         return totalCount;
     }
 
-    public double accelerate(double speed, double duration){
+    public double accelerate(double speed, double durationInHours) {
         //concatenation
-        System.out.println(name + " is accelerating with " + speed + " km/h for " + duration + " h. " );
+        System.out.println(name + " is accelerating with " + speed + " km/h for " + durationInHours + " h. ");
 
-        double distance = speed * duration;
-        System.out.println("Traveled " + distance + " km. " );
+        double distance = speed * durationInHours;
+        System.out.println("Traveled " + distance + " km. ");
 
 //        traveledDistance = traveledDistance + distance;
         //same result as the above statement
@@ -104,10 +104,14 @@ public class Vehicle{
         System.out.println("Remaining fuel: " + fuelLevel + " l. ");
 
         return distance;
+    }
+        public double accelerate(double speed){
+            return accelerate(speed);
+        }
 
 
 
     }
 
 
-}
+
