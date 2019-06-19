@@ -1,14 +1,23 @@
 package org.FasttrackIT;
 
+public class Vehicle{
 
-public class Vehicle {
-   private String name;
+
+
+
+    private static int totalCount;
+
+    private String name;
    private double mileage;
    private String color;
    private double maxspeed;
    private boolean running;
    private double fuelLevel;
    private double traveledDistance;
+
+   public Vehicle(){
+       totalCount ++; // incrementare +1
+   }
 
 
     public String getName() {
@@ -65,6 +74,10 @@ public class Vehicle {
 
     public void setTraveledDistance(double traveledDistance) {
         this.traveledDistance = traveledDistance;
+    }
+
+    public static int getTotalCount() {
+        return totalCount;
     }
 
     public double accelerate(double speed, double duration){

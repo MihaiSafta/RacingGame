@@ -50,6 +50,16 @@ public class App
 // added accelerate method for vehicles
 
 
+        System.out.println("Total vehicles: " + Vehicle.getTotalCount());
+//demo for static variables (class variables)
+//        System.out.println("Studying static variables...");
+//
+//        car.totalCount = 1;
+//        System.out.println("Total count from car: " +car.totalCount);
+//        car2.totalCount = 2;
+//        System.out.println("Total count from car after setting car2: " + car.totalCount);
+//        System.out.println("Total count from car: " +car2.totalCount);
+//        System.out.println("Total count from Vehicle class: " + Vehicle.totalCount);
 
     }
 }
