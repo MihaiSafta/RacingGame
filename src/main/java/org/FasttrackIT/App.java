@@ -60,10 +60,18 @@ public class App
 //        System.out.println("Total count from car after setting car2: " + car.totalCount);
 //        System.out.println("Total count from car: " +car2.totalCount);
 //        System.out.println("Total count from Vehicle class: " + Vehicle.totalCount);
-    car2.accelerate(100);
+   // car2.accelerate(100);
 
     new AutoVehicle();
+    new Car();
 
+        System.out.println("Today...");
+        System.out.println(car.toString());
+
+        BatMobile batMobile = new BatMobile();
+        batMobile.setName("Cheating vehicle");
+        batMobile.accelerate(60, 1);
+        car.accelerate(60, 1);
 
     }
 
