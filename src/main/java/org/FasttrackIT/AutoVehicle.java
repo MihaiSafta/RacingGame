@@ -5,7 +5,7 @@ public class AutoVehicle extends Vehicle {
     // "has-a" relasionship (agregare= functioneaza si individual)
     Engine engine;
 
-    public AutoVehicle(Engine engine){
+    public AutoVehicle(Engine engine) {
         this.engine = engine;
 
     }

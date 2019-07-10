@@ -1,6 +1,7 @@
 package org.FasttrackIT;
+
 //inheritance or 'is-a' relationship
-public class Car extends AutoVehicle{
+public class Car extends AutoVehicle {
 
     int doorCount;
 
@@ -8,7 +9,8 @@ public class Car extends AutoVehicle{
     public Car(Engine engine) {
         super(engine);
     }
-    public Car(){
+
+    public Car() {
         //any constructor will try to call the no parameter constructor of the parent class
     }
 

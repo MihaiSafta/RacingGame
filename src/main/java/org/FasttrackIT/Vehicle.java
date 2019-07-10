@@ -2,24 +2,22 @@ package org.FasttrackIT;
 
 import java.util.Objects;
 
-public class Vehicle{
-
-
+public class Vehicle {
 
 
     private static int totalCount;
 
     private String name;
-   private double mileage;
-   private String color;
-   private double maxspeed;
-   private boolean running;
-   private double fuelLevel;
-   private double traveledDistance;
+    private double mileage;
+    private String color;
+    private double maxspeed;
+    private boolean running;
+    private double fuelLevel;
+    private double traveledDistance;
 
-   public Vehicle(){
-       totalCount ++; // incrementare +1
-   }
+    public Vehicle() {
+        totalCount++; // incrementare +1
+    }
 
 
     public String getName() {
@@ -83,14 +81,14 @@ public class Vehicle{
     }
 
     public double accelerate(double speed, double durationInHours) {
-       if (fuelLevel <= 0){
-           System.out.println("You don`t have enough fuel to accelerate. Fuel level: " + fuelLevel);
-           return 0;
-                  }
-       if (speed >= maxspeed ){
-           System.out.println("Requested speed is too high. Maximum allowed: " + maxspeed);
-           return 0;
-       }
+        if (fuelLevel <= 0) {
+            System.out.println("You don`t have enough fuel to accelerate. Fuel level: " + fuelLevel);
+            return 0;
+        }
+        if (speed >= maxspeed) {
+            System.out.println("Requested speed is too high. Maximum allowed: " + maxspeed);
+            return 0;
+        }
 
 
         //concatenation
@@ -117,13 +115,14 @@ public class Vehicle{
 
         return distance;
     }
-       public double accelerate(double speed){
-           double accelerate = accelerate(speed);
-            return accelerate;
-       }
+
+    public double accelerate(double speed) {
+        double accelerate = accelerate(speed);
+        return accelerate;
+    }
 
 
-       //suprascriere
+    //suprascriere
 //co-variant return type (returned object must inherit what the overridden method was returning)
 //Method Signature must be the same, except:
 // 1. co-variant return type

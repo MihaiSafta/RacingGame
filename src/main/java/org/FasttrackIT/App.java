@@ -83,8 +83,8 @@ public class App {
 //
 //    }
 
-    Game game = new Game();
-    game.start();
+        Game game = new Game();
+        game.start();
 // String pool
 //        String a = "test";
 //        String b = "test";

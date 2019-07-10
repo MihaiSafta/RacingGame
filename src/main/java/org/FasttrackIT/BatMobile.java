@@ -1,6 +1,6 @@
 package org.FasttrackIT;
 
-public class BatMobile extends Vehicle{
+public class BatMobile extends Vehicle {
 
     @Override
     public double accelerate(double speed, double durationInHours) {
