@@ -24,6 +24,35 @@ public class Game {
             addCompetitor();
         }
         displayCompetitors();
+        boolean winnerNotKnown = true;
+        int competitorsWithoutFuel = 0;
+        while (winnerNotKnown && competitorsWithoutFuel < competitors.size()) {
+
+
+            //enhanced for / for-each
+            for (Vehicle competitor : competitors) {
+                competitor.accelerate(getSpeedFromUser());
+                if (competitor.getTraveledDistance() >= selectedTrack.getLenght()) {
+                    System.out.println("Congrats! The winner is: " + competitor.getName());
+                    winnerNotKnown = false;
+                    break;
+                }
+                if (competitor.getFuelLevel() <= 0) {
+                    competitorsWithoutFuel++;
+                }
+            }
+        }
+    }
+
+    private double getSpeedFromUser() {
+        System.out.println("Please enter acceleration speed: ");
+        Scanner scanner = new Scanner(System.in);
+        try {
+            return scanner.nextDouble();
+        } catch (InputMismatchException e) {
+            System.out.println("You have entered an invalid value");
+            return getSpeedFromUser();
+        }
     }
 
     private Track getTrackSelectedByUser() {
@@ -35,9 +64,9 @@ public class Game {
             Track track = tracks[trackNumber - 1];
             System.out.println("Selected track: " + track.getName());
             return track;
-        } catch (InputMismatchException | ArrayIndexOutOfBoundsException e){
+        } catch (InputMismatchException | ArrayIndexOutOfBoundsException e) {
             System.out.println("You entered an invalid track number. Please try again!");
-            // return a method invoking inself
+            // return a method invoking itself
             return getTrackSelectedByUser();
         }
     }
